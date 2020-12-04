@@ -8,7 +8,7 @@
     >
       <a :href="messenger.urlLink" @click="onClickLink(messenger.name)">
         <figure class="image is-48x48 mb-2 contactsIcon">
-          <img :src="'/images/' + messenger.name + '.svg'" />
+          <img :src="'/images/' + messenger.name.toLowerCase() + '.svg'" />
         </figure>
       </a>
       <div class="block is-size-6 has-text-centered">{{ messenger.name }}</div>
