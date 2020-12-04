@@ -1,9 +1,9 @@
 <template>
-  <div class="columns">
+  <div class="columns is-mobile">
     <div
       v-for="(messenger, index) in contactsOptions"
       :key="index"
-      class="column"
+      class="column is-one-third-mobile"
       @click="onClickLink(rep, index)"
     >
       <a :href="messenger.urlLink" @click="onClickLink(messenger.name)">
@@ -11,7 +11,7 @@
           <img :src="'/images/' + messenger.name.toLowerCase() + '.svg'" />
         </figure>
       </a>
-      <div class="block is-size-6 has-text-centered">{{ messenger.name }}</div>
+      <div class="block is-size-7 has-text-centered">{{ messenger.name }}</div>
     </div>
   </div>
 </template>
