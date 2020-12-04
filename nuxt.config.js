@@ -89,5 +89,8 @@ export default {
 
   googleAnalytics: {
     id: 'UA-58827039-1',
+    autoTracking: {
+      screenview: true,
+    },
   },
 }
