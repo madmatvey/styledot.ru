@@ -8,6 +8,11 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Алина Леонтьева – персональный стилист | styledot.ru',
+    titleTemplate: 'Алина Леонтьева – персональный стилист | %s | styledot.ru',
+    htmlAttrs: {
+      lang: 'ru',
+      amp: true,
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -89,5 +94,8 @@ export default {
 
   googleAnalytics: {
     id: 'UA-58827039-1',
+    autoTracking: {
+      screenview: true,
+    },
   },
 }

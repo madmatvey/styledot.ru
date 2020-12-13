@@ -4,6 +4,7 @@
       <Logo />
       <h1 class="title">Алина Леонтьева</h1>
       <h2 class="subtitle">персональный стилист</h2>
+      <Contacts />
     </div>
   </div>
 </template>
