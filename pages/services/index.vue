@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container is-mobile">
     <div v-for="(service, index) in services" :key="index">
       <div :id="service.slug" class="content is-mobile has-text-centered">
         <a
@@ -74,7 +74,7 @@ export default {
 <style>
 .container {
   margin: 20px 20px 20px 20px;
-  min-height: 100vh;
+  min-height: 10vh;
 }
 
 .title {
@@ -98,4 +98,8 @@ export default {
 .links {
   padding-top: 15px;
 }
+
+/* .content ul {
+  list-style-type: circle;
+} */
 </style>
