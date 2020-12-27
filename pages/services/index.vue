@@ -28,7 +28,7 @@
 export default {
   async asyncData({ $content, params }) {
     const services = await $content('services', params.slug)
-      .sortBy('createdAt', 'asc')
+      .sortBy('index', 'asc')
       .fetch()
 
     return {
@@ -50,8 +50,8 @@ export default {
         this.toggle = null
       } else {
         this.toggle = service.slug
+        this.showService(service)
         this.$scrollTo('#' + service.slug, { offset: -7, force: true })
-        // document.getElementById().scrollIntoView()
       }
       this.$ga.event({
         eventCategory: 'About Service',
