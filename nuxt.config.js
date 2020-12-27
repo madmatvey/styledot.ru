@@ -73,6 +73,8 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://vue-scrollto.netlify.app/docs/#nuxt-js
+    'vue-scrollto/nuxt',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

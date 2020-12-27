@@ -1,10 +1,14 @@
 <template>
   <div class="container">
     <div v-for="(service, index) in services" :key="index">
-      <div class="content is-mobile has-text-centered">
-        <button class="button is-light" @click="onClickService(service)">
+      <div :id="service.slug" class="content is-mobile has-text-centered">
+        <a
+          class="button is-light mt-2"
+          :href="'/services/#' + service.slug"
+          @click="onClickService(service)"
+        >
           {{ service.title }}
-        </button>
+        </a>
         <div v-show="showService(service)" class="box has-text-left">
           <h2 class="subtitle is-6">
             {{ service.description }}
@@ -32,12 +36,22 @@ export default {
       toggle: null,
     }
   },
+  mounted() {
+    if (this.$route.hash !== '' && this.toggle === null) {
+      const serviceSelected = this.services.find(
+        (service) => '#' + service.slug === this.$route.hash
+      )
+      this.onClickService(serviceSelected)
+    }
+  },
   methods: {
     onClickService(service) {
       if (this.toggle === service.slug) {
         this.toggle = null
       } else {
         this.toggle = service.slug
+        this.$scrollTo('#' + service.slug, { offset: -7, force: true })
+        // document.getElementById().scrollIntoView()
       }
       this.$ga.event({
         eventCategory: 'About Service',
