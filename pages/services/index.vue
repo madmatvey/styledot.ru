@@ -4,21 +4,11 @@
       <div :id="service.slug" class="content is-mobile has-text-centered">
         <a
           class="button is-light mt-2"
-          :href="'/services/#' + service.slug"
+          :href="'/services/' + service.slug"
           @click="onClickService(service)"
         >
           {{ service.title }}
         </a>
-        <div v-show="showService(service)" class="box has-text-left">
-          <h2 class="subtitle is-6">
-            {{ service.description }}
-          </h2>
-          <service :document="service" />
-          <div class="pb-3 pt-1 has-text-centered">
-            <span class="tag is-light">↘️ Записывайся ↙️</span>
-          </div>
-          <Contacts />
-        </div>
       </div>
     </div>
   </div>
@@ -33,39 +23,16 @@ export default {
 
     return {
       services,
-      toggle: null,
-    }
-  },
-  mounted() {
-    if (this.$route.hash !== '' && this.toggle === null) {
-      const serviceSelected = this.services.find(
-        (service) => '#' + service.slug === this.$route.hash
-      )
-      this.onClickService(serviceSelected)
     }
   },
   methods: {
     onClickService(service) {
-      if (this.toggle === service.slug) {
-        this.toggle = null
-      } else {
-        this.toggle = service.slug
-        this.showService(service)
-        this.$scrollTo('#' + service.slug, { offset: -7, force: true })
-      }
       this.$ga.event({
         eventCategory: 'About Service',
         eventAction: 'click',
         eventLabel: service.slug,
         eventValue: 0,
       })
-    },
-    showService(service) {
-      if (this.toggle === service.slug) {
-        return true
-      } else {
-        return false
-      }
     },
   },
 }
