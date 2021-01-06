@@ -1,15 +1,30 @@
 <template>
-  <div class="container is-mobile">
-    <div v-for="(service, index) in services" :key="index">
-      <div :id="service.slug" class="content is-mobile has-text-centered">
-        <a
-          class="button is-light mt-2"
-          :href="'/services/' + service.slug"
-          @click="onClickService(service)"
-        >
-          {{ service.title }}
-        </a>
-      </div>
+  <div class="container has-text-centered">
+    <h1 class="title is-capitalized">Услуги</h1>
+    <div v-for="(service, index) in services" :key="index" class="mt-3 mb-3">
+      <a
+        class="is-light"
+        :href="'/services/' + service.slug"
+        @click="onClickService(service)"
+      >
+        <div class="card">
+          <div class="card-image mt-2">
+            <figure class="image is-64x64 mx-auto">
+              <img
+                :src="'/images/' + service.slug + '.svg'"
+                :alt="service.title"
+              />
+            </figure>
+          </div>
+          <div class="card-content has-text-centered">
+            <p>
+              <strong>{{ service.title }}</strong>
+              <br />
+              {{ service.description }}
+            </p>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -44,29 +59,8 @@ export default {
   min-height: 10vh;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 150;
-  font-size: 2.5em;
-  color: #35495e;
-  letter-spacing: 1px;
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.subtitle {
-  font-weight: 100;
-  font-size: 2em;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-/* .content ul {
-  list-style-type: circle;
-} */
 </style>
