@@ -13,6 +13,9 @@
           <span class="tag is-light">↘️ Записывайся ↙️</span>
         </div>
         <Contacts />
+        <div class="pb-3 pt-1 has-text-centered">
+          <a class="button is-light mb-7" :href="'/services/'"> Услуги </a>
+        </div>
       </div>
     </div>
   </div>
