@@ -10,11 +10,11 @@
         </h2>
         <service :document="service" />
         <div class="pb-3 pt-1 has-text-centered">
-          <span class="tag is-light">↘️ Записывайся ↙️</span>
+          <span class="tag is-light is-medium">↘️ Записывайтесь ↙️</span>
         </div>
         <Contacts />
         <div class="pb-3 pt-1 has-text-centered">
-          <a class="button is-light mb-7" :href="'/services/'"> Услуги </a>
+          <a class="button is-light mb-7 mt-4" :href="'/services/'"> Назад </a>
         </div>
       </div>
     </div>
