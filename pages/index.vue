@@ -3,8 +3,9 @@
     <div>
       <Logo />
       <h1 class="title">Алина Леонтьева</h1>
-      <h2 class="subtitle">персональный стилист</h2>
-      <Contacts />
+      <h2 class="subtitle mb-7">персональный стилист</h2>
+      <a class="button is-light mb-7" :href="'/services/'"> Услуги </a>
+      <Contacts class="mt-3" />
     </div>
   </div>
 </template>
@@ -38,10 +39,5 @@ export default {}
   font-size: 2em;
   color: #526488;
   word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>

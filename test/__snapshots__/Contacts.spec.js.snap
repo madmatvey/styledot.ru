@@ -2,20 +2,20 @@
 
 exports[`Contacts renders properly 1`] = `
 "<div class=\\"columns is-mobile\\">
-  <div class=\\"column is-one-third-mobile\\"><a href=\\"https://t.me/styledot_leonteva\\">
-      <figure class=\\"image is-48x48 mb-2 contactsIcon\\"><img src=\\"/images/telegram.svg\\"></figure>
-    </a>
-    <div class=\\"block is-size-7 has-text-centered\\">Telegram</div>
-  </div>
-  <div class=\\"column is-one-third-mobile\\"><a href=\\"https://wa.me/79277461266\\">
-      <figure class=\\"image is-48x48 mb-2 contactsIcon\\"><img src=\\"/images/whatsapp.svg\\"></figure>
-    </a>
-    <div class=\\"block is-size-7 has-text-centered\\">WhatsApp</div>
-  </div>
-  <div class=\\"column is-one-third-mobile\\"><a href=\\"viber://chat?number=79277461266\\">
-      <figure class=\\"image is-48x48 mb-2 contactsIcon\\"><img src=\\"/images/viber.svg\\"></figure>
-    </a>
-    <div class=\\"block is-size-7 has-text-centered\\">Viber</div>
-  </div>
+  <div class=\\"column is-one-third-mobile is-flex has-text-centered contactsIcon\\"><a href=\\"https://t.me/styledot_leonteva\\">
+      <figure class=\\"image is-48x48 mb-2\\"><img src=\\"/images/telegram.svg\\">
+        <div class=\\"is-size-7 has-text-centered\\">Telegram</div>
+      </figure>
+    </a></div>
+  <div class=\\"column is-one-third-mobile is-flex has-text-centered contactsIcon\\"><a href=\\"https://wa.me/79277461266\\">
+      <figure class=\\"image is-48x48 mb-2\\"><img src=\\"/images/whatsapp.svg\\">
+        <div class=\\"is-size-7 has-text-centered\\">WhatsApp</div>
+      </figure>
+    </a></div>
+  <div class=\\"column is-one-third-mobile is-flex has-text-centered contactsIcon\\"><a href=\\"viber://chat?number=79277461266\\">
+      <figure class=\\"image is-48x48 mb-2\\"><img src=\\"/images/viber.svg\\">
+        <div class=\\"is-size-7 has-text-centered\\">Viber</div>
+      </figure>
+    </a></div>
 </div>"
 `;

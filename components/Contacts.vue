@@ -3,15 +3,15 @@
     <div
       v-for="(messenger, index) in contactsOptions"
       :key="index"
-      class="column is-one-third-mobile"
+      class="column is-one-third-mobile is-flex has-text-centered contactsIcon"
       @click="onClickLink(rep, index)"
     >
       <a :href="messenger.urlLink" @click="onClickLink(messenger.name)">
-        <figure class="image is-48x48 mb-2 contactsIcon">
+        <figure class="image is-48x48 mb-2">
           <img :src="'/images/' + messenger.name.toLowerCase() + '.svg'" />
+          <div class="is-size-7 has-text-centered">{{ messenger.name }}</div>
         </figure>
       </a>
-      <div class="block is-size-7 has-text-centered">{{ messenger.name }}</div>
     </div>
   </div>
 </template>
@@ -43,6 +43,5 @@ export default {
 <style>
 .contactsIcon {
   justify-content: center;
-  margin: auto;
 }
 </style>
